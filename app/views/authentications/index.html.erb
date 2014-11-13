@@ -1,0 +1,5 @@
+<% if current_user.blank? %>
+  <%= link_to 'Login with Facebook', '/auth/facebook/' %>
+<% else %>
+  <%= link_to "Destroy", destroy_user_session_path, :method => 'Delete' %>
+<% end %>
